@@ -1,11 +1,3 @@
-  
-
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Apr 12 17:12:17 2021
-@author: Teo Bee Guan
-"""
-
 import streamlit as st
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
