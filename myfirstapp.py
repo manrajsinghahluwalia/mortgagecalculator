@@ -33,7 +33,7 @@ with col2:
     down_payment_percent = st.sidebar.number_input("Enter your down payment percent(%): ", min_value=0.0, format='%f')
     
     st.sidebar.subheader("Target Payment Period (Years)")
-    payment_years = st.sidebar.number_input("Enter your target payment period (years): ", min_value=3, format='%d')
+    payment_years = st.sidebar.number_input("Enter your target payment period (years): ", min_value=1, format='%d')
     
 
 down_payment = home_value* (down_payment_percent / 100)
