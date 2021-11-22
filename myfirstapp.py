@@ -8,6 +8,7 @@ Created on Mon Apr 12 17:12:17 2021
 
 import streamlit as st
 import plotly.graph_objects as go
+import plotly
 from plotly.subplots import make_subplots
 import numpy as np
 
