@@ -7,9 +7,12 @@ Created on Mon Apr 12 17:12:17 2021
 """
 
 import streamlit as st
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
+import pandas as pd
 import numpy as np
+import plotly.express as px
+from plotly.subplots import make_subplots
+import plotly.graph_objects as go
+import matplotlib.pyplot as plt
 
 st.set_page_config(
     page_title="Mortgage Loan Simulator")
