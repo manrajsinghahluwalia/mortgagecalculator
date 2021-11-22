@@ -1,6 +1,4 @@
-  
-
-# -*- coding: utf-8 -*-
+  # -*- coding: utf-8 -*-
 """
 Created on Mon Apr 12 17:12:17 2021
 @author: Teo Bee Guan
@@ -17,22 +15,21 @@ st.set_page_config(
 st.title("Mortgage Loan Simulator")
 
 st.header("**Mortgage Details**")
-col1, col2 = st.columns(2)
+col1, col2 = st.beta_columns(2)
 
-st.sidebar.subheader("User Inputs")
 with col1:
-    st.sidebar.subheader("Home Value")
-    home_value = st.sidebar.number_input("Enter your home value($): ", min_value=0.0, format='%f')
+    st.subheader("Home Value")
+    home_value = st.number_input("Enter your home value($): ", min_value=0.0, format='%f')
     
-    st.sidebar.subheader("Loan Interest Rate")
-    interest_rate = st.sidebar.number_input("Enter your home loan interest rate(%): ", min_value=0.0, format='%f')
+    st.subheader("Loan Interest Rate")
+    interest_rate = st.number_input("Enter your home loan interest rate(%): ", min_value=0.0, format='%f')
 
 with col2:
-    st.sidebar.subheader("Down Payment Percent")
-    down_payment_percent = st.sidebar.number_input("Enter your down payment percent(%): ", min_value=0.0, format='%f')
+    st.subheader("Down Payment Percent")
+    down_payment_percent = st.number_input("Enter your down payment percent(%): ", min_value=0.0, format='%f')
     
-    st.sidebar.subheader("Target Payment Period (Years)")
-    payment_years = st.sidebar.number_input("Enter your target payment period (years): ", min_value=3, format='%d')
+    st.subheader("Target Payment Period (Years)")
+    payment_years = st.number_input("Enter your target payment period (years): ", min_value=3, format='%d')
     
 
 down_payment = home_value* (down_payment_percent / 100)
@@ -175,8 +172,8 @@ st.plotly_chart(fig, use_container_width=True)
 st.markdown("---")
 st.header("**Forecast Growth**")
 
-st.sidebar.subheader("Forecast Growth (Per Year)")
-forecast_growth = st.sidebar.number_input("Enter your forecast growth rate(%): ",  format='%f')
+st.subheader("Forecast Growth (Per Year)")
+forecast_growth = st.number_input("Enter your forecast growth rate(%): ",  format='%f')
 
 growth_per_month = (forecast_growth / 12.0) / 100 
 growth_array = np.full(payment_months, growth_per_month)
@@ -225,5 +222,3 @@ fig.update_layout(title='Forecast Home Value Vs Forecast Home Equity Over Time',
                   )
 
 st.plotly_chart(fig, use_container_width=True)
-
-    
